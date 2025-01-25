@@ -1,0 +1,217 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   background-image: url(assets/Galaxy.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+
+section{
+    position: relative;
+    max-width: 400px;
+    background-color: transparent;
+    box-shadow: 0em 0 2em 1em rgba(0, 0, 0, .4);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    backdrop-filter: blur(55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+h1{
+    font-size: 2rem;
+    color: #ffff;
+    text-align: center;
+}
+
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    max-width: 310px;
+    border-bottom: 2px solid #ffff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #ffff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all .5s ease-in-out;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
+    color: #7BD3EA;
+}
+
+.inputbox input{
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: antiquewhite;
+}
+
+.forget {
+    width: 100%;
+    margin: 35px;
+    font-size: .85rem;
+    color: black;
+    position: relative;
+    left: -30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.forget label{
+    display: flex;
+    align-items: center;
+    color: #7BD3EA;
+}
+
+.forget label input{
+    margin-right: 3px;
+}
+
+.forget a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+
+.forget a:hover{
+    text-decoration: underline;
+    color: #7BD3EA;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all .4s;
+    position: relative;
+}
+
+button:hover{
+    background-color: white;
+    color:#0A5EB0;
+}
+
+.register{
+    font-size: .9rem;
+    color: white;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a {
+    text-decoration: none;
+    color: #7BD3EA;
+    font-weight: 600;
+}
+
+.register p a:hover{
+    text-decoration: underline;
+}
+
+/* CONIC GRADIENT -- animated border */
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+button::after, button::before{
+    --angle: 0deg;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 102%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, #7BD3EA);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 1.4rem;
+    border-radius: 40px;
+    animation: 2s spin linear infinite; 
+}
+button::before{
+    filter: blur(1.5rem);
+    opacity: .5;
+}
+
+/*
+section::before, section::after {
+    content: '';
+    position: absolute;
+    height: 102%;
+    width: 103%;
+    background-image: conic-gradient(from var(--angle), transparent 80%, skyblue);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    border-radius: 25px;
+    z-index: -1;
+    animation: 2s spin linear infinite;
+}
+section::before{
+    filter: blur(.5rem);
+}
+
+*/
+
+/* KEY FRAMES*/
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 90deg;
+    }
+    to{
+        --angle: 180deg;
+    }
+    to{
+        --angle: 270deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+
+/* RESPONSIVENESS */
