@@ -6,65 +6,70 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Monoton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=DM+Serif+Text:ital@0;1&family=Monoton&display=swap" rel="stylesheet">
     <title>Product Landing Page</title>
 </head>
 <body>
-    <div class="page-wrapper">
-        <header id="header">
-            <div class="logo">
-                <a href="#"><img src="/mini-projects/Product-Landing-Page/assets/Logo/Logo.png" alt="Logo" id="header-id"></a>
-                <a href="#"><h1 class="monoton">Sneakrheads</h1></a>
+    <!-- Header with navigation -->
+    <header>
+        <nav>
+            <div class="logo monoton">
+                Sneakrheads
             </div>
-            <nav id="nav-bar">
-                <ul>
-                    <li class="nav-link bebas"><a href="#features">Features</a></li>
-                    <li class="nav-link bebas"><a href="#">Pricing</a></li>
-                    <li class="nav-link bebas"><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-<div class="container">
-    <section id="features">
-        <div class="grid card">
-            <img src="assets/Product/Nike-green1.jpg" alt="Green shoes" class="item-img">
-            <p class="heading">
-                Popular this month
-              </p>
-              <p>
-               
-              </p>
-              <p>
-            </p>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to <strong>Sneakrheads</strong></h1>
+            <p>Transform your life with our revolutionary solution</p>
+            <a href="#learn-more" class="btn">Learn More</a>
         </div>
-        <div class="grid card">
-            <img src="assets/Product/nike-yellow.jpg" alt="Green shoes">
-            <p class="heading">
-                Popular this month
-              </p>
-              <p>
-                
-              </p>
-              <p>
-            </p>
-        </div>
-        <div class="grid card">
-            <img src="assets/Product/converse-yellow.jpg" alt="Green shoes">
-            <p class="heading">
-                Popular this month
-              </p>
-              <p>
-                
-              </p>
-              <p>
-            </p>
-        </div>  
     </section>
-    <section id="Pricing"></section>
-    <section id="Contact"></section>
-</div>
-<section id="contact">
-</section>
-</body>
+
+    <!-- Features section -->
+    <section class="features" id="features">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card1">
+                <div class="card-content">
+                    <h3>Classic Comfort</h3>
+                    <p>Classic never fades. Premium suede upper in sunflower yellow, 
+                        paired with signature rubber toe cap and distinctive All Star patch. 
+                        Perfect blend of comfort and timeless style for your everyday adventures.</p>
+                </div>  
+            </div>
+            <div class="feature-card2">
+                <div class="card-content">
+                    <h3>Urban Style</h3>
+                    <p>Make a statement with these bold color-block Nike SB sneakers. 
+                        Featuring premium leather and suede overlays in navy, yellow, and red. 
+                        Built for both style and performance with enhanced cushioning.</p>
+                </div>  
+            </div>
+            <div class="feature-card3">
+                <div class="card-content">
+                    <h3>Retro Revival</h3>
+                    <p>Embrace retro vibes with this vintage-inspired Nike Air design. 
+                        Forest green and soft pink colorway creates a unique aesthetic, 
+                        while Air-Sole technology ensures all-day comfort.</p>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action section -->
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Ready to Get Started?</h2>
+            <p style="margin: 1rem 0 2rem;">Join thousands of satisfied customers today</p>
+            <a href="#signup" class="btn btn-white">Sign Up Now</a>
+        </div>
+    </section>
 </html>

@@ -1,242 +1,365 @@
-/* GOOGLE FONTS */
-
-.bebas {
-    font-family: "Bebas Neue", serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 25px;
-  }
+/* GOOGLE FONTS CLASSES */
 .monoton {
-    font-family: "Monoton", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-/* START OF DESIGN */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html{
-    scroll-behavior: smooth;
+  font-family: "Monoton", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-body{
-    font-family: 'Poppins', sans-serif ;
-    /*background: url(/mini-projects/Product-Landing-Page/assets/Background/BG-main.jpg); */
-    width: 100%;
+/* START */
+
+:root{
+  --color1: #F5F5F5;
+  --color2: #FF6600;
+  --color3: #5D8736;
+  --color4: #604CC3;
+  --font-logo: "Monoton", serif;
+  --font-headings1: "Bebas Neue", serif;
+  --font-headings2: "Bona Nova SC", serif;
+  --text-fonts1: "DM Serif Text", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+  background: transparent;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1600px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
   height: 100%;
-  background-color: #111111;
-  background-image: linear-gradient(
-    32deg,
-    rgba(8, 8, 8, 0.74) 30px,
-    transparent
-  );
-  background-size: 60px 60px;
-  background-position: -5px -5px;
+  position: relative;
+  display: flex;
 }
 
-#page-wrapper{
-    position: relative;
+.logo {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: 3.5rem;
+  font-weight: normal;
+  color: var(--color2);
+  text-shadow: 1px 0px 15px rgba(255,255,255,0.2);
+}
+.logo img{
+  position: relative;
+  width: 11%;
+  max-height: 280px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  mask-image: url('assets/Logo/Logo.png');
+  mask-size: cover;
+  background-color: white;
 }
 
-header{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 20px;
-    position: fixed;
-    margin-top: 20px;
-    top: 0;
-    background: transparent;
-    position: sticky;
-}
-div{
-    display: block;
-    unicode-bidi: isolate;
-}
-.logo{
-    width: 60vw;
-    display: grid;
-    grid-template-columns: 60px 60px;
-    gap: 0;
-    position: relative;
-    left: 60px;
+.nav-links {
+  display: flex;
+  gap: 7rem;
 }
 
-.logo a > img{
-    width: 100%;
-    height: 90%;
-    max-width: 400px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    aspect-ratio: 16 /9;
-    cursor: pointer;
+.nav-links a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: whitesmoke;
+  transition: color 0.3s;
+  font-family: "Bebas Neue", serif;
+  letter-spacing: 3px;
+  text-shadow: 1px 0px 3px rgba(0,0,0,0.2);
 }
 
-.logo h1{
-    align-items: center;
-    padding-left: 20%;
-    letter-spacing: 5px;
-    color: #5B913B;
-    text-shadow: #5B913B 1px 0px 4px;
-    cursor: pointer;
+.nav-links a:last-of-type {
+  color: var(--color2);
+  text-shadow: 1px 0px 5px rgba(0,0,0,0.5);
 }
 
-/* NAVBAR */
-nav{
-    font-weight: 600;
-    display: block;
-    unicode-bidi: isolate;
+.nav-links a:hover {
+  color: var(--color2);
+  transform: scale(1.1);
+  transform: translate(6px, 6px);
+  transition: all .3s ease;
 }
-nav > ul{
-    width: 35vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-ul{
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
-}
-li{
-    list-style: none;
-    cursor: pointer;
-    max-width: 400px;
-    font-size: 18px;
-    text-shadow: rgba(0, 0, 0, .3) 1px 0px 4px;
-}
-a{
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-#nav-bar li:last-of-type a{
-    color: #5B913B;
-}
-#nav-bar li a:hover{
-    color: #5B913B ;
-}
-
-
-#nav-bar li:hover{
-    color: #5B913B;
-    transform: translate(1px, 5px);
-    transition: all .3s;
+.nav-links a:last-of-type:hover{
+  color: var(--color2);
 }
 
 
 
-/* FEATURES */
 
-.container{
-    max-width: 900px;
-    max-height: 500px;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    align-content: center;
-    /* backdrop-filter: blur(55px); */
-    position: relative;
-    top: 120px;
-    right: 60px;
+
+/* Hero section styles */
+.hero {
+  height: 100vh;
+  background: radial-gradient(ellipse at top, black, transparent),
+            radial-gradient(ellipse at bottom, var(--color3), transparent);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #1A1A19;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
 }
-#features {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 150px;
+
+.hero-content {
+  max-width: 1200px;
+  text-align: center;
 }
-.card {
-    position: relative;
-    width: 250px;
-    height: 300px;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding: 12px;
-    gap: 15px;
-    border-radius: 8px;
-    cursor: pointer;
+
+.hero h1 {
+  font-family: var(--font-headings2);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color2);
+  text-shadow: 1px 0 10px rgba(0,0,0,.7);
+}
+.hero h1 strong{
+  font-family: var(--font-logo);
+  font-weight: 400;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Features section styles */
+.features {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  max-height: 600px;
+  margin: 0 auto;
+}
+
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.features-grid h3, .features-grid p{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.feature-card1, .feature-card2, .feature-card3 {
+  position: relative;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all .3s ease;
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hide text by default */
+.feature-card1 h3,
+.feature-card1 p,
+.feature-card2 h3,
+.feature-card2 p,
+.feature-card3 h3,
+.feature-card3 p {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+.feature-card1 h3,
+.feature-card2 h3,
+.feature-card3 h3{
+  font-family: var(--font-headings2);
+  letter-spacing: 4px;
+}
+
+.feature-card1 p,
+.feature-card2 p,
+.feature-card3 p{
+  font-family: var(--text-fonts1);
+  line-height: 25px;
+  text-align: justify;
+}
+
+
+/* Show text on hover */
+.feature-card1:hover h3,
+.feature-card1:hover p,
+.feature-card2:hover h3,
+.feature-card2:hover p,
+.feature-card3:hover h3,
+.feature-card3:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+.feature-card1:hover h3,
+.feature-card2:hover h3,
+.feature-card3:hover h3{
+  color: var(--color2);
+}
+.feature-card1:hover p,
+.feature-card2:hover p,
+.feature-card3:hover p{
+  color: var(--color1);
+}
+
+
+
+/* Overlay effect */
+.feature-card1::before,
+.feature-card2::before,
+.feature-card3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+/* Show overlay on hover */
+.feature-card1:hover::before,
+.feature-card2:hover::before,
+.feature-card3:hover::before {
+  opacity: 1;
+}
+
+/* Add staggered animation for text */
+.feature-card1:hover h3,
+.feature-card2:hover h3,
+.feature-card3:hover h3 {
+  transition-delay: 0.1s;
+}
+
+.feature-card1:hover p,
+.feature-card2:hover p,
+.feature-card3:hover p {
+  transition-delay: 0.2s;
+}
+
+/* Individual card background images */
+.feature-card1 {
+  background-image: url(assets/Product/converse-yellow.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.feature-card2 {
+  background-image: url(assets/Product/nike-yellow.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.feature-card3 {
+  background-image: url(assets/Product/Nike-green1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Card content wrapper */
+.card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Adds space between title and description */
+}
+
+
+
+
+/* CTA section styles */
+.cta {
+  background: radial-gradient(ellipse at top, var(--color2), transparent),
+            radial-gradient(ellipse at bottom, var(--color3), transparent);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #1A1A19;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  background-color: var(--color1);
+  color: var(--color2);
+  text-decoration: none;
+  border-radius: 0.5em;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  border: 1px solid var(--color2);
+  transition: all 0.3s;
+  box-shadow: 3px 3px 6px var(--color2), -3px -3px 6px var(--color2);
+}
+.btn:active{
+  color: #666;
+  box-shadow: inset 4px 4px 16px var(--color3), inset -4px -4px 16px var(--color3);
+}
+
+.btn:hover {
+  background-color: var();
+}
+
+.btn-white {
+  background-color: white;
+  color: #007bff;
+}
+
+.btn-white:hover {
+  background-color: #f8f9fa;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* In a real project, you'd add a hamburger menu here */
   }
-  .card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    left: -5px;
-    margin: auto;
-    width: 260px;
-    height: 310px;
-    border-radius: 10px;
-    background: linear-gradient(-45deg, #F4FFC3 0%, #5D8736 100% );
-    z-index: -10;
-    pointer-events: none;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  .heading {
-    color: white;
-    font-size: 18px;
-    text-transform: capitalize;
-    font-weight: 600;
-    font-family: "DM Serif Text", serif;
-    text-shadow: rgba(255, 255, 0, .4) 1px 0px 6px;
-  }
-  .card p:not(.heading) {
-    font-size: 14px;
-  }
-  
-  .card p:last-child {
-    color: #e81cff;
-    font-weight: 600;
-  }
-  
-  .card:hover::after {
-    filter: blur(30px);
-  }
-  
-  .card:hover::before {
-    transform: rotate(-75deg) scaleX(1.24) scaleY(0.77);
-  }  
 
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    box-shadow: 15px 0px 15px rgba(0, 0, 0, .3) ;
-  }
-  .grid img{
-    position: absolute;
-    aspect-ratio: 16 / 9;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    border-radius: 10px;
+  .hero h1 {
+      font-size: 2rem;
   }
 
-  .item-img:hover{
-    transform: scale(2);
-    transition: all 2s;
-    z-index: 999;
+  .hero p {
+      font-size: 1rem;
   }
-
-
-
-/* KEYFRAMES AND PROPERTIES*/
-
-
-@keyframes shake {
-    from{
-        --angle: 0deg;
-    }
-    to{
-        --angle: 5deg;
-    }
 }
