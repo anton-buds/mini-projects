@@ -49,7 +49,8 @@ nav {
   display: flex;
   align-items: center;
   align-content: center;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
+  letter-spacing: .4rem;
   font-weight: normal;
   color: var(--color2);
   text-shadow: 1px 0px 15px rgba(255,255,255,0.2);
