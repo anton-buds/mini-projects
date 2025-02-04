@@ -180,6 +180,7 @@ nav {
 }
 
 .features h2 {
+  padding-top: 4rem;
   color: var(--color2);
   font-family: var(--font-logo);
   font-weight: 400;
@@ -343,7 +344,13 @@ nav {
   text-align: center;
   overflow: hidden;
   backdrop-filter: blur(1px);
-  box-shadow: 0 -15px 32px 0 rgba(247, 133, 3, 0.2);
+  box-shadow: 0 15px 32px 0 rgba(247, 133, 3, 0.2);
+  transition: all var(--transition-speed) ease;
+  margin-bottom: 4rem;
+}
+.cta:hover{
+  box-shadow: 0 25px 32px 0 rgba(247, 133, 3, 0.2);
+  transition: all var(--transition-speed) ease;
 }
 
 .cta-content {
@@ -378,28 +385,27 @@ nav {
   cursor: pointer;
   border: 1px solid var(--color2);
   transition: all 0.3s;
-  box-shadow: 3px 3px 6px var(--color2), -3px -3px 6px var(--color2);
+  box-shadow: 3px 3px 13px var(--color2), -3px -3px 13px var(--color2);
   position: relative;
   z-index: 2;
 }
 
 .btn:active{
   color: #666;
-  box-shadow: inset 4px 4px 16px var(--color3), inset -4px -4px 16px var(--color3);
+  box-shadow: inset 4px 4px 25px var(--color1), inset -4px -4px 16px var(--color1);
 }
 
-.btn:hover {
-  background-color: var();
+.btn:hover, .btn-white:hover {
+  background-color: var(--color2);
+  color: var(--color1);
+  box-shadow: 1px 1px 3px var(--color1), -1px -1px 3px var(--color1);
 }
 
 .btn-white {
-  background-color: white;
+  background-color: var(--color1);
   color: var(--color2);
 }
 
-.btn-white:hover {
-  background-color: #f8f9fa;
-}
 
 /* GOOGLE FONTS CLASSES */
 .monoton {
