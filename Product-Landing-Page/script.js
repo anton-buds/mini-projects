@@ -11,7 +11,6 @@ document.addEventListener('mousemove', (e) => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollTop = 0;
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
