@@ -20,4 +20,3 @@ test('todo `update` default case should return model unmodified', function (t) {
   t.deepEqual(model, unmodified_model, "model returned unmodified");
   t.end();
 });
-

@@ -10,17 +10,19 @@ var intitial_model = {
 /* module.exports is needed to run the functions using Node.js for testing! */
 if (typeof module !== 'undefined' && module.exports){
     module.exports = {
-        model: intitial_model
-        
+        model: intitial_model,
+        update: update
     }
 }
 
 /**
  * `update` transforms the `model` based on the `action`.
  * @param {String} action - the desired action to perform on the model.
- * @param {Object} model - the App's (current) model (or "state").
+ * @param {Object} model - the App's data ("state").
  * @return {Object} new_model - the transformed model.
  */
+
+
 function update(action, model) {
     switch (action) {                  // action (String) determines which case
       default:                         // if action unrecognised or undefined,
